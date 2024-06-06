@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1 style="color: #000000;">Monte o seu burger</h1>
+    <form id="burger-form" method="POST" style="background-color: #f2c318; padding: 20px; border-radius: 10px;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="input-container" style="margin-top: 15px;">
+            <input class="submit-btn" type="submit" value="Criar meu Burger!" style="background-color: #f7f5e9; color: #000000; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+        </div>
+    </form>
+</div>
+
+<div class="container" style="background-color: #f2f2f2; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+    <h2 style="color: #000000;">Últimos Pedidos feitos pelos nossos clientes:</h2>
+    <ul>
+        {% for pedido in pedidos_recentes %}
+            <li style="background-color: #fff; padding: 15px; margin-bottom: 15px; border-radius: 5px; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);">
+                <span style="color: #f2c318; font-weight: bold;">Nome:</span> {{ pedido.nome }}<br>
+                <span style="color: #f2c318; font-weight: bold;">Pão:</span> {{ pedido.pao.name }}<br>
+                <span style="color: #f2c318; font-weight: bold;">Carne:</span> {{ pedido.carne.name }}<br>
+                <span style="color: #f2c318; font-weight: bold;">Opcionais:</span> 
+                {% for opcional in pedido.opcionais.all %}
+                    <span style="color: #000; background-color: #f7f5e9; padding: 5px; border-radius: 3px;">{{ opcional.name }}</span>{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

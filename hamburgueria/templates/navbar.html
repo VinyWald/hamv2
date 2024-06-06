@@ -1,0 +1,26 @@
+{% block content %}
+<div>
+    <div id="nav" style="position: relative;">
+        <div id="user-info" style="position: absolute; top: 1; left: 0;">
+            {% if user.is_authenticated %}
+                <p style="color: #f2c318; margin: 0;">
+                    <img src="/C:/Users/joaof/OneDrive/Documentos/TchunflayAlfa/TchunflayAlfa/Hamburgueriav1/Hamburgueriav1/media/img/profile-user.png"  style="width: 20px; height: 20px; margin-right: 5px;">
+                    Bem-vindo, <span style="font-weight: bold; color: #f2c318;">{{ user.username }}</span>
+                </p>
+                <a href="{% url 'logoutUser'%}" style="color: #f2c318;">Sair</a>
+            {% else %}
+                <a href="{% url 'loginUser'%}" style="color: #f2c318; margin-right: 10px;">Login</a>
+                <a href="{% url 'registro'%}" style="color: #f2c318;">Registrar-se</a>
+            {% endif %}
+        </div>
+        <p>
+            <a href="{% url 'home' %}"><img id="logo" src="/media/img/logo.png" alt="Logo"></a>
+        </p>
+        <div id="menu-links" style="position: relative;">
+            <a href="{% url 'home' %}" style="color: #f2c318;">Home</a>
+            <a href="{% url 'fazer_pedido' %}" style="color: #f2c318;">Fazer Pedido</a>
+            <a href="{% url 'meus_pedidos' %}" style="color: #f2c318;">Meus Pedidos</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

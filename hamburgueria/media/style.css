@@ -1,0 +1,522 @@
+#pp{
+  font-size: inherit;
+  padding: 10px;
+  border: 1px solid #fcba03;
+  border-radius: 10px;
+  background-color: #222;
+  color: #FFF;
+  
+}
+.mb-0{
+  font-size: inherit;
+  padding: 10px;
+  border: 1px solid #fcba03;
+  border-radius: 10px;
+  background-color: #222;
+  color: #FFF;
+  margin-top: 5px;
+ 
+}
+#xuxu{
+    background-color: #444;
+    position: relative;
+    padding: 9px;
+    
+}
+#xuxu2{
+  margin-top: 15px;
+ 
+  
+}
+
+#xablau{
+  /* Definições de layout */
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column; /* Organiza os itens em uma coluna */
+  width: 400px;
+  height: 200px;
+  background-color: #222;
+  border: 1px solid #fcba03;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+
+  /* Estilo do conteúdo */
+  font-size: inherit; /* Tamanho da fonte padrão */
+  font-weight: 900;
+  color:#FFF;
+  text-align:left;
+  font-family: monospace;
+  padding: 5px; /* Espaçamento interno */
+  list-style-type:circle; /* Remove os marcadores de lista */
+}
+.rotulos{
+ 
+  text-align: center;
+  padding: 1px;
+  display: flex;
+	justify-content:left;
+}
+
+
+
+
+
+
+.form-control{
+  background-color: #222;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+	border: 1px solid #222;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  width: 370px;
+	margin-bottom: 10px;
+ 
+}
+.ddd{
+  
+	width: 320px;
+	margin-bottom: 10px;
+	padding: 5px;
+	border: 1px solid #66bbff;
+	border-radius: 5px;
+}
+.burguer-form{
+  padding: 5px;
+	border: 1px solid #222;
+	border-radius: 5px;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  width: 320px;
+	margin-bottom: 10px;
+
+  
+}
+.md-6{
+  height: 45vh;
+  padding: 10px;
+	border: 1px solid #222;
+	border-radius: 5px;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  
+}
+.mt-3{
+  display:flex;
+  align-items: flex-end;
+	justify-content:flex-end;
+  
+}
+.mt-5{
+  height: 45vh;
+  padding: 10px;
+
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  
+}
+.teste{
+  background-color: #222;
+  color:#FFF;
+  font-weight: bold;
+  border: 1px solid #222;
+  top:15px;
+  padding: 10px;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+  transition: .5s;
+  border-radius: 5px;
+}
+.teste:hover{
+background-color: transparent;
+color: #222;
+}
+.teste2{
+  background-color: #222;
+  color:#FFF;
+  font-weight: bold;
+  border: 1px solid #222;
+  padding: 5px;
+  font-size: 12px;
+
+  cursor: pointer;
+  transition: .5s;
+  border-radius: 5px;
+}
+.teste2:hover{
+background-color: transparent;
+color: #222;
+}
+
+.btn-primary{
+  background-color: #222;
+  color:#fcba03;
+  font-weight: bold;
+  border: 2px solid #222;
+  padding: 10px;
+  font-size: 16px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: .5s;
+  border-radius: 5px;
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: 300ms ease-in-out;
+	
+}
+.btn-primary:hover{
+  background-color:#fcba03;
+  transform:scale(1.05);
+  box-shadow:13px 13px 100px #969696,-13px -13px 100px #ffffff;
+  color:#111;
+}
+
+.main-banner {
+  background-image: url('/media/img/burger.jpg');
+    background-position: 0 55%;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.main-banner {
+    color: #FFF;
+    text-align: center;
+    font-size: 60px;
+    background-color: #222;
+    padding: 20px 40px;
+}
+/* NAVBAR */
+#nav {
+    background-color: #222;
+    border-bottom: 4px solid #111;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  #nav #logo-url {
+    margin: auto;
+    margin-left: 0;
+  }
+
+  #logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  #nav a {
+    color: #fcba03;
+    text-decoration: none;
+    margin: 12px;
+    transition: .5s;
+  }
+
+  #nav a:hover {
+    color: #FFF;
+  }
+/* FOOTER */
+#footer {
+  height: 100px;
+  position: flex;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  color: #fcba03;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 4px solid #111;
+  }
+/* DASHBORD */
+#burger-table {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+  }
+
+  #burger-table-heading,
+  #burger-table-rows,
+  .burger-table-row {
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+  }
+
+  #burger-table-heading {
+    font-weight: bold;
+    padding: 12px;
+    border-bottom: 3px solid #333;
+  }
+
+  .burger-table-row {
+    width: 100%;
+    padding: 12px;
+    border-bottom: 1px solid #CCC;
+    
+  }
+
+  #burger-table-heading div,
+  .burger-table-row div {
+    width: 19%;
+    
+  }
+
+  #burger-table-heading .order-id,
+  .burger-table-row .order-number {
+    width: 5%;
+    
+  }
+
+  select {
+    padding: 12px 6px;
+    margin-right: 12px;
+   
+   
+  }
+
+  .delete-btn {
+    background-color: #222;
+    color:#fcba03;
+    font-weight: bold;
+    border: 2px solid #222;
+    padding: 10px;
+    font-size: 16px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: .5s;
+  }
+  
+  .delete-btn:hover {
+    background-color: transparent;
+    color: #222;
+  }
+  
+/* BURGUERfORM */
+#burger-form {
+    max-width: 400px;
+    margin: 0px auto;
+    
+   display:table;
+   align-items:center;
+   
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: center; 
+   
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #222;;
+    padding: 5px 10px;
+    border-left: 4px solid #fcba03;
+  }
+
+  input, select {
+    background-color: #222;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  width: 350px;
+  height: 35px;
+  padding: 5px;
+  color: white;
+  border: 1px solid #ccc;
+  font-family: sans-serif;
+  font-size: 14px;
+  appearance: none;
+  cursor: pointer;
+  display:table-column; /* Define as caixas como blocos para melhor alinhamento */
+  margin-bottom: 10px; /* Adiciona espaço entre as caixas */
+  }
+
+  #opcionais-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  
+  }
+
+  #opcionais-title {
+    width: 100%;
+  }
+
+  .checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    width: 50%;
+    margin-bottom: 20px;
+   
+  }
+
+  .checkbox-container span,
+  .checkbox-container input {
+    width: auto;
+    
+  }
+
+  .checkbox-container span {
+    margin-left: 6px;
+    font-weight: bold;
+  }
+
+
+  .submit-btn {
+    background-color: #222;
+    color:#fcba03;
+    font-weight: bold;
+    border: 2px solid #222;
+    padding: 10px;
+    font-size: 16px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 5px;
+   
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: 300ms ease-in-out;
+    
+  }
+  .submit-btn:hover{
+    background-color:#fcba03;
+    transform:scale(1.05);
+    box-shadow:13px 13px 100px #969696,-13px -13px 100px #ffffff;
+    color:#111
+  }
+
+
+
+
+
+
+
+/* BANER */
+#main-banner {
+    background-image: url('/img/burger.jpg');
+    background-position: 0 -250px;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  #main-banner h1 {
+    color: #FFF;
+    text-align: center;
+    font-size: 60px;
+    background-color: #222;
+    padding: 20px 40px;
+  }
+
+/* ALL */
+* {
+    font-family: Helvetica;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    
+  }
+
+  .main-container {
+    margin: 50px;
+    min-height: 250px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 30px;
+    color: #222;
+  }
+
+  .caixaT {
+    background-color: #222;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    height: 35px;
+    padding: 5px;
+    color: white;
+    border: 1px solid #ccc;
+    font-family: sans-serif;
+    font-size: 14px;
+    appearance: none;
+    cursor: pointer;
+    display:table-column; /* Define as caixas como blocos para melhor alinhamento */
+    margin-bottom: 10px; /* Adiciona espaço entre as caixas */
+  }
+  
+  
+  .caixaT .option {
+    background-color: #222;
+    color: white;
+  }
+  
+  .option.caixaT:hover {
+    background-color: white;
+    color: #222;
+    border: 1px solid orange;
+  }
+  
+  .caixaT .option:checked {
+    background-color: #222;
+    color: white;
+  }
+  
+  .caixaT .option:checked::before {
+    content: "●"; /* Use um marcador diferente se preferir */
+    color: orange;
+    margin-right: 5px;
+  }
+  
+  .caixaT select {
+    appearance: none; /* Remove o estilo padrão do sistema operacional */
+    -webkit-appearance: none; /* Para navegadores baseados em WebKit */
+    -moz-appearance: none; /* Para navegadores baseados em Gecko */
+    background-color: #222;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  /* Adicione uma borda laranja ao focar */
+  .caixaT select:focus {
+    outline: none;
+    border: 1px solid orange;
+  }
+  
+ .card{
+ 
+ 
+  margin-top: 120px;
+  
+ 
+  justify-content: flex-start;
+ }
+/* .card-body{
+ 
+ 
+ }*/
+ 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhin+</title>
+    <link rel="stylesheet" href="/media/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <div id="nav">
+            <div id="user-info" style="position: absolute; top: 0; left: 0; margin: 10px;">
+                <!-- Se o usuário não estiver autenticado, exibir o link para login -->
+                <a href="/hamburgueria/login/">Login</a>
+            </div>
+            <p>
+                <a href="/hamburgueria/"><img id="logo" src="/media/img/logo.png" alt=""></a>
+            </p>
+            <a href="/hamburgueria/">Home</a>
+            <a href="/hamburgueria/fazer_pedido/">Fazer Pedido</a>
+            <a href="/hamburgueria/meus_pedidos/">Meus pedidos</a>
+        </div>
+    </div>
+
+    {% block content %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card" style="background-color: #f2c318; border: 1px solid #ced4da; border-radius: 10px;">
+                    <div class="card-header bg-primary text-white" style="border-radius: 10px 10px 0 0;">
+                        <h4 class="mb-0">Login</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="{% url 'loginUser' %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="username">Nome de Usuário:</label>
+                                <input type="text" class="form-control" id="username" name="username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Senha:</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Entrar</button>
+                        </form>
+                    </div>
+                    {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+                <div class="text-center mt-3">
+                    <a href="{% url 'registro' %}" class="btn btn-primary" style="text-decoration: none;">Registre-se aqui</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

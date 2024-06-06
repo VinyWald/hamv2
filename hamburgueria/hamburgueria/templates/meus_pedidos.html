@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="xuxu">
+    <h2 id="pp" style="color: #f2c318;">Meus Pedidos</h2>
+    {% if pedidos %}
+        <ul>
+            {% for pedido in pedidos %}
+                <li id="xablau">
+                    Pedido #{{ pedido.id }} - <span style="color: green;">{{ pedido.nome }}</span> - {{ pedido.dataPedido }}
+                    <ul id="xuxu2">
+                        <li>Pão: {{ pedido.pao.name }}</li>
+                        <li>Carne: {{ pedido.carne.name }}</li>
+                        <li>
+                            Opcionais: 
+                            {% if pedido.opcionais.all %}
+                                {% for opcional in pedido.opcionais.all %}
+                                    {{ opcional.name }}{% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                            {% else %}
+                                Nenhum
+                            {% endif %}
+                        </li>
+                        <li>Status: {{ pedido.status }}</li>
+                        <li>Notas: {{ pedido.notas|linebreaks }}</li>
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Você ainda não fez nenhum pedido.</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Página</title>
+    <style>
+        /* Estilos para o corpo da página */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Definindo altura mínima como 100% da viewport */
+        }
+
+        /* Estilos para o conteúdo principal */
+        .content {
+            flex: 1; /* O conteúdo se expandirá para preencher o espaço disponível */
+        }
+
+        /* Estilos para o footer */
+        #footer {
+            background-color: #333; /* Cor de fundo do footer */
+            color: white; /* Cor do texto do footer */
+            text-align: center; /* Alinhamento do texto no centro */
+            padding: 20px; /* Espaçamento interno */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- Seu conteúdo principal aqui -->
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="footer">
+        <p>Monte seu Burger &copy;</p>
+    </div>
+</body>
+</html>
